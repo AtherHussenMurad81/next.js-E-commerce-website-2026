@@ -15,7 +15,7 @@ const Footer = () => {
             //   className="w-6 h-6 md:w-9 md:h-9"
           ></Image>
         </Link>
-        <p className="hidden md:block font-medium text-shadow-md tracking-wider">
+        <p className="hidden md:block font-medium text-shadow md tracking-wider text-gray-100">
           TREND-LAMA
         </p>
         <p className="text-sm text-gray-400">2026 Trend-Lama</p>
