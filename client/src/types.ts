@@ -1,4 +1,5 @@
-export type ProductsType = {
+import { ProductsType } from "@/types";
+export type ProductType = {
   id: string | number;
   name: string;
   shortDescription: string;
@@ -8,3 +9,5 @@ export type ProductsType = {
   colors: string[];
   images: Record<string, string>;
 };
+
+export type ProductsType = ProductType;

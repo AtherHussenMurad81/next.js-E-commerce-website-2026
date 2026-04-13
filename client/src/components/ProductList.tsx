@@ -1,5 +1,7 @@
 import { ProductsType } from "@/types";
 import React from "react";
+import Categories from "./Categories";
+import ProductCart from "./ProductCart";
 const products: ProductsType = [
   {
     id: 1,
@@ -111,7 +113,20 @@ const products: ProductsType = [
   },
 ];
 const ProductList = () => {
-  return <div>ProductList</div>;
+  return (
+    <div className="w-full">
+      <Categories />
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+        {products.length === 0 ? (
+          <p className="text-center py-10">No products available</p>
+        ) : (
+          products.map((product) => (
+            <ProductCart key={product.id} product={product} />
+          ))
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ProductList;
